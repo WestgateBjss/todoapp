@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	<link rel="stylesheet" href="./style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+	<title>Todo Items</title>
+</head>
+
+<body>
+	<div class="container mt-3">
+		<br />
+		<h1>Todo Items</h1>
+		<br />
+		<a href="/new">Create a new Todo</a>
+		<br />
+		
+		<h2>All Items</h2>
+		<div id="itemList"></div>
+		
+		<script>
+			fetch("/api").then(r=>r.json()).then(data=>{
+                var dataDisplayed = "<ul>";
+                for(var a of data.dataFound){
+                    dataDisplayed+=`<li>The name is: ${a.title}, the description is: ${a.description} and completed: ${a.completed}</li>`;
+                }
+                itemList.innerHTML += dataDisplayed + "</ul>";
+            }).catch(e=>console.log(e));
+		</script>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+	background-color: #9de7fa;
+	color: white;
+	font-family: "Poppins", sans-serif;
+	min-height: 100vh;
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #f89fba;
+	border-color: #f89fba;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	<link rel="stylesheet" href="./style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+    <title>Add a Todo</title>
+</head>
+
+<body>
+	<div class="container mt-3">
+		<br />
+		<h1>Todotodo</h1>
+		<br />
+        <a href="/">Home</a>
+		<form action="/formSubmit" method="POST">
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputTitle" style="font-size: 23px">Title</label>
+					<input type="text" class="form-control" id="inputTitle" name="title" />
+				</div>
+
+				<div class="form-group col-md-6">
+					<label for="inputCompleted" style="font-size: 23px">Is Complete</label>
+					<input type="checkbox" class="form-control" id="inputCompleted" name="completed" />
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="form-group col-md-12">
+					<label for="inputDescription" style="font-size: 23px">Description</label>
+					<input type="text" class="form-control" id="inputDescription" name="description" />
+				</div>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
